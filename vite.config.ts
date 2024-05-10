@@ -20,6 +20,14 @@ export default defineConfig({
       entry: resolve(__dirname, "src/components/lib/index.ts"),
       name: "testui",
       fileName: (format) => `testui.${format}.ts`
+    },
+    rollupOptions: {
+      external: ["vue"],
+      output: {
+        globals: {
+          vue: "Vue"
+        }
+      }
     }
   },
   resolve: {
