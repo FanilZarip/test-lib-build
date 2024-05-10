@@ -5,7 +5,7 @@
   "type": "module",
   "main": "./dist/testui.umd.ts",
   "module": "./dist/testui.es.ts",
-  "types": "./dist/components/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -22,6 +22,7 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
+    "build:lib": "vite build && vue-tsc --emitDeclarationOnly -p tsconfig.lib.json",
     "type-check": "vue-tsc --build --force",
     "type-check-watch": "vue-tsc --build --force --watch",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",

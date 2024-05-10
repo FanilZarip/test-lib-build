@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/components/lib/**/*", "src/components/lib/**/*.vue"],
+  "exclude": ["src/**/__tests__/*", "src/**/*.spec.ts"],
+  "compilerOptions": {
+    "target": "esnext",
+
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "declaration": true,
+    "noEmit": false
+  }
+}
