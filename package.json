@@ -1,8 +1,21 @@
 {
   "name": "test-lib-create",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "private": false,
   "type": "module",
+  "main": "./dist/testui.umd.ts",
+  "module": "./dist/testui.es.ts",
+  "types": "./dist/components/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/testui.es.ts",
+      "require": "./dist/testui.umd.ts"
+    },
+    "./styles": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -10,11 +23,9 @@
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
+    "type-check-watch": "vue-tsc --build --force --watch",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
-  },
-  "dependencies": {
-    "vue": "^3.4.21"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
@@ -35,7 +46,12 @@
     "sass": "^1.77.0",
     "typescript": "~5.4.0",
     "vite": "^5.2.8",
+    "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.4.0",
+    "vue": "^3.4.21",
     "vue-tsc": "^2.0.11"
+  },
+  "peerDependencies": {
+    "vue": ">=3.4"
   }
 }

@@ -9,6 +9,8 @@ import RadioGroup from "@/components/lib/radio/RadioGroup.vue";
 
     <div class="wrapper">
       <BaseButton> Test </BaseButton>
+      <BaseButton type="outline"> Test </BaseButton>
+
       <RadioGroup></RadioGroup>
     </div>
   </header>

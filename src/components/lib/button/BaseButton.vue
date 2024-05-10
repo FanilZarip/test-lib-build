@@ -20,6 +20,30 @@ const classes = computed(() => {
 
 <style lang="scss" scoped>
 .button {
-  background-color: #0ebb11;
+  border: 2px solid transparent;
+  color: white;
+  padding: 6px 15px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.test-lib-primary {
+  background-color: #0017c3;
+}
+
+.test-lib-primary:hover {
+  background-color: #081890;
+}
+
+.test-lib-outline {
+  background-color: transparent;
+  border-color: #0017c3;
+  color: #0017c3;
+}
+
+.test-lib-outline:hover {
+  background-color: transparent;
+  border-color: #081890;
 }
 </style>
