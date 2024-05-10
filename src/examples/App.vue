@@ -11,7 +11,12 @@ import RadioGroup from "@/components/lib/radio/RadioGroup.vue";
       <BaseButton> Test </BaseButton>
       <BaseButton type="outline"> Test </BaseButton>
 
-      <RadioGroup></RadioGroup>
+      <RadioGroup
+        :options="[
+          { id: 1, value: 'One' },
+          { id: 2, value: 'Two' }
+        ]"
+      ></RadioGroup>
     </div>
   </header>
 
