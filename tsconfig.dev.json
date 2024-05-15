@@ -6,7 +6,7 @@
   },
   "include": [
     "**/*.d.ts",
-    "**.*.spec.ts",
+    "**/*.spec.ts",
     "tailwind.config.ts",
     "vitest.config.ts",
     "playground/src/**/*.ts",
