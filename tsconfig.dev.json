@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false
+  },
+  "include": [
+    "**/*.d.ts",
+    "**/*.spec.ts",
+    "tailwind.config.ts",
+    "vitest.config.ts",
+    "playground/src/**/*.ts",
+    "playground/src/**/*.tsx",
+    "playground/src/**/*.vue",
+    "docs/**/*.ts",
+    "docs/**/*.tsx",
+    "docs/**/*.vue"
+  ]
+}
